@@ -1,0 +1,22 @@
+[
+  {
+    "name": "homepage",
+    "run_url": "http://risd.random?sort=published_date",
+    "run_config": {
+      "viewportSize": {
+        "width": 1200,
+        "height": 768
+      }
+    }
+  },
+  {
+    "name": "about",
+    "run_url": "http://risd.random/about",
+    "run_config": {
+      "viewportSize": {
+        "width": 1200,
+        "height": 768
+      }
+    }
+  }
+]

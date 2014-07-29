@@ -2,7 +2,7 @@ require 'yaml'
 require 'json'
 require 'deep_merge'
 
-module DpxdtGenerator
+module DpxdtCli
   class ConfigGenerator
     def self.generate(input_filename, destination_dir)
 

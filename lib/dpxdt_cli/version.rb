@@ -1,3 +1,3 @@
-module DpxdtGenerator
+module DpxdtCli
   VERSION = "0.0.1"
 end

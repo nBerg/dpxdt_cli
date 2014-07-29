@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'dpxdt_generator/version'
+require 'dpxdt_cli/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "dpxdt_generator"
-  spec.version       = DpxdtGenerator::VERSION
+  spec.name          = "dpxdt_cli"
+  spec.version       = DpxdtCli::VERSION
   spec.authors       = ["Nina Berg"]
   spec.email         = ["nikb100@gmail.com"]
-  spec.summary       = %q{generates dpxdt configs for ccns}
+  spec.summary       = %q{CLI tool to help work with ccn dpxdt configs}
   spec.description   = %q{longer description goes here}
   spec.homepage      = ""
   spec.license       = "MIT"
