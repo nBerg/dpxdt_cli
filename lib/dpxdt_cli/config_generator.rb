@@ -6,6 +6,10 @@ module DpxdtCli
   class ConfigGenerator
     def self.generate(input_filename, destination_dir)
 
+      # TODO fail nicely?
+      fail 'Please provide a valid input filename' unless File.file?(input_filename)
+      fail 'Please provide a valid output destination' unless File.directory?(destination_dir)
+
       input = YAML.load(File.open(input_filename))
       default_config = input['defaults']
 
@@ -41,9 +45,12 @@ module DpxdtCli
           )
         end
 
-        # puts JSON.pretty_generate(pages)
-        File.write("#{destination_dir}/#{ccn}.json", JSON.pretty_generate(pages))
+        output_file = "#{destination_dir}/#{ccn}.json"
+        puts "Creating/Updating: #{output_file}"
+        File.write(output_file, JSON.pretty_generate(pages))
       end
+
+      puts "All configs generated!"
     end
   end
 end
