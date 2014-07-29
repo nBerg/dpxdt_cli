@@ -1,5 +1,2 @@
-require "dpxdt_generator/version"
-
-module DpxdtGenerator
-  # Your code goes here...
-end
+require 'dpxdt_generator/version'
+require 'dpxdt_generator/config_generator'
