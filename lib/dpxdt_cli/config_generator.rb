@@ -14,7 +14,7 @@ module DpxdtCli
       default_config = input['defaults']
 
       input.each do |ccn, config|
-        next if ccn.eql? 'defaults'
+        next if ccn.eql? 'defaults' or ccn.eql? 'test_run_config'
 
         # Merge the defaults into the ccn config
         #

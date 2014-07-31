@@ -9,5 +9,11 @@ module DpxdtCli
       DpxdtCli::ConfigGenerator.generate(input, output)
     end
 
+    desc "test_run", "Trigger a test run for all ccns"
+    def test_run()
+      options = YAML.load(File.open('ccn.yaml'))['test_run_config']
+      DpxdtCli::TestRunner.run(options)
+    end
+
   end
 end
