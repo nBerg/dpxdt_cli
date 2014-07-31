@@ -10,8 +10,12 @@ module DpxdtCli
     end
 
     desc "test_run", "Trigger a test run for all ccns"
+    method_option :executable
+    method_option :dpxdt_server
+    method_option :test_dir
+    method_option :release_cut_url
+    method_option :ccn_config
     def test_run()
-      options = YAML.load(File.open('ccn.yaml'))['test_run_config']
       DpxdtCli::TestRunner.run(options)
     end
 

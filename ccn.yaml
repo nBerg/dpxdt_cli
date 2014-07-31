@@ -1,0 +1,16 @@
+---
+defaults:
+  domain: ccnstage.com
+  run_config:
+    viewportSize:
+      width: 1200
+      height: 768
+  pages:
+    - name: homepage
+      path: ?sort=published_date
+    - name: about
+      path: /about
+moore:
+  build_id: 5
+risd:
+  build_id: 7
