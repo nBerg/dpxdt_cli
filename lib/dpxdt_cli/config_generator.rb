@@ -32,16 +32,22 @@ module DpxdtCli
         # 2. I could customize the merging of the pages array
         config.deep_merge(default_config)
 
+        puts config
+
         # Create the base url
         # TODO: make http/https protocol configurable?
         base = "http://#{ccn}.#{config['domain']}"
         pages = []
 
         config['pages'].each do |p|
+          # Merge in the page specific run config
+          run_config = p['run_config'] || {}
+          run_config.deep_merge(config['run_config'])
+
           pages.push(
             name: p['name'],
             run_url: "#{base}#{p['path']}",
-            run_config: p['run_config'] || config['run_config']
+            run_config: run_config
           )
         end
 

@@ -3,14 +3,38 @@ defaults:
   domain: ccnstage.com
   run_config:
     viewportSize:
-      width: 1200
-      height: 768
+      width: 1280
+      height: 800
   pages:
     - name: homepage
       path: ?sort=published_date
     - name: about
       path: /about
+    - name: signup
+      path: /signup/decision
+    - name: view_project_guest
+      path: /gallery/2837/HD-manarola
+    - name: profile_view
+      path: /ccnuser
 moore:
-  build_id: 5
+  build_id: 1
 risd:
+  build_id: 3
+fit:
+  build_id: 5
+pratt:
   build_id: 7
+philau:
+  build_id: 9
+ccs:
+  build_id: 11
+scad:
+  build_id: 13
+artinstitutes:
+  build_id: 15
+losandes:
+  build_id: 17
+ringling:
+  build_id: 19
+nda:
+  build_id: 21
