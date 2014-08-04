@@ -32,8 +32,6 @@ module DpxdtCli
         # 2. I could customize the merging of the pages array
         config.deep_merge(default_config)
 
-        puts config
-
         # Create the base url
         # TODO: make http/https protocol configurable?
         base = "http://#{ccn}.#{config['domain']}"
