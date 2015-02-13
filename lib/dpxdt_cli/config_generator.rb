@@ -34,7 +34,7 @@ module DpxdtCli
 
         # Create the base url
         # TODO: make http/https protocol configurable?
-        base = "http://#{ccn}.#{config['domain']}"
+        base = "#{config['protocol']}://#{ccn}.#{config['domain']}"
         pages = []
 
         config['pages'].each do |p|
